@@ -9,5 +9,4 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /home
 EXPOSE 8020
-#CMD ["java","-jar","/home/sysmodule/*.jar","sleep infinity"]
-ENTRYPOINT ["sleep infinity"]
+ENTRYPOINT ["java","-jar","/home/sysmodule/**.jar","sleep infinity"]
